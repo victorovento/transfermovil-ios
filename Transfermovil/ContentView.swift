@@ -10,18 +10,20 @@ import SwiftUI
 struct ContentView: View {
     @State var selectedBank: Int = 1
     @State var logoutAlert: Bool = true
-    
+    @State var showSetting:Bool = false
     
     var body: some View {
         NavigationView{
-            
             Form{
-                Picker("Banco", selection: $selectedBank) {
-                    Text("BANDEC").tag(1)
-                    Text("BPA").tag(2)
-                    Text("Banco Metropolitano").tag(3)
+                Section{
+                    Picker("Banco", selection: $selectedBank) {
+                        Text("BANDEC").tag(1)
+                        Text("BPA").tag(2)
+                        Text("Banco Metropolitano").tag(3)
+                    }
                 }
-                                
+                
+                
                 Section(header: Text("Sesión")){
                     NavigationLink {
                         AuthView(selectedBank:self.selectedBank)
@@ -35,7 +37,7 @@ struct ContentView: View {
                     } label: {
                         Label("Cerrar sesion", systemImage: "xmark.circle")
                     }.foregroundColor(.red)
-
+                    
                     
                 }
                 Section(header: Text("Operaciones")){
@@ -78,12 +80,27 @@ struct ContentView: View {
                 }
                 
                 Section(header: Text("Recargar")){
-                    Label("Recargar móvil", systemImage: "iphone")
-                    Label("Recargar Nauta", systemImage: "network")
-                    Label("Pagar cuota de Nauta Hogar", systemImage: "network")
-                    Label("Pagar deuda de Nauta Hogar", systemImage: "network")
-                    Label("Recargar JovenClub", systemImage: "pc")
-                    Label("Recargar propia", systemImage: "phone.down")
+                    NavigationLink {
+                        MobileRechargeView()
+                    } label: {
+                        Label("Recargar móvil", systemImage: "iphone")
+                    }
+                    NavigationLink {
+                        NautaRechargeView()
+                    } label: {
+                        Label("Recargar Nauta", systemImage: "network")
+                    }
+                    NavigationLink {
+                        NautaRechargeView()
+                    } label: {
+                        Label("Recargar JovenClub", systemImage: "pc")
+                    }
+                    NavigationLink {
+                        NautaRechargeView()
+                    } label: {
+                        Label("Recargar propia", systemImage: "phone.down")
+                    }
+                    
                 }
                 
                 Section(header: Text("Consultas")){
@@ -147,13 +164,21 @@ struct ContentView: View {
                 }
                 
             }.symbolVariant(.fill)
-            .navigationTitle("Transfermóvil")
+                .navigationTitle("Transfermóvil")
+                .toolbar {
+                    Button("Ajustes"){
+                        showSetting.toggle()
+                    }.sheet(isPresented: $showSetting) {
+                        SettingsView()
+                    }
+                    
+                }
             
             
         }
         
     }
-
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

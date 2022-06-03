@@ -17,12 +17,12 @@ struct PenaltyPaymentView: View {
             Section {
                 TextField("ID de la multa", text: $penaltyID)
                 TextField("Carnet de identidad", text: $personID)
-                HStack{
-                    TextField("Monto",text: $moneyToPay)
-                    Picker("Moneda", selection: $currency) {
-                        Text("CUP").tag(1)
-                        Text("USD").tag(2)
-                    }
+                
+                TextField("Monto",text: $moneyToPay)
+                Picker("Moneda", selection: $currency) {
+                    Text("CUP").tag(1)
+                    Text("USD").tag(2)
+                    
                 }
             }
             Button {

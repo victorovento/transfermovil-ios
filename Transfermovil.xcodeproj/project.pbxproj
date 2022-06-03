@@ -25,6 +25,11 @@
 		57AA2AC2284A91F900BBC10F /* GasPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA2AC1284A91F900BBC10F /* GasPaymentView.swift */; };
 		57AA2AC4284A952B00BBC10F /* MoneyOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA2AC3284A952B00BBC10F /* MoneyOrderView.swift */; };
 		57AA2AC6284A9ABA00BBC10F /* PenaltyPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA2AC5284A9ABA00BBC10F /* PenaltyPaymentView.swift */; };
+		57AA2AC8284A9DD600BBC10F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA2AC7284A9DD600BBC10F /* SettingsView.swift */; };
+		57AA2ACB284AA6D700BBC10F /* MobileRechargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA2ACA284AA6D700BBC10F /* MobileRechargeView.swift */; };
+		57AE5D71284AB36D009E6E01 /* NautaRechargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AE5D70284AB36D009E6E01 /* NautaRechargeView.swift */; };
+		57AE5D73284AB5D0009E6E01 /* JovenClubRechargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AE5D72284AB5D0009E6E01 /* JovenClubRechargeView.swift */; };
+		57AE5D78284AB6D9009E6E01 /* PropiaRechargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AE5D77284AB6D9009E6E01 /* PropiaRechargeView.swift */; };
 		57E7C6402849AF7A00F44BE7 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E7C63F2849AF7A00F44BE7 /* AuthView.swift */; };
 		57E7C6422849BC4E00F44BE7 /* USSD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E7C6412849BC4E00F44BE7 /* USSD.swift */; };
 /* End PBXBuildFile section */
@@ -69,6 +74,11 @@
 		57AA2AC1284A91F900BBC10F /* GasPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasPaymentView.swift; sourceTree = "<group>"; };
 		57AA2AC3284A952B00BBC10F /* MoneyOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyOrderView.swift; sourceTree = "<group>"; };
 		57AA2AC5284A9ABA00BBC10F /* PenaltyPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenaltyPaymentView.swift; sourceTree = "<group>"; };
+		57AA2AC7284A9DD600BBC10F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		57AA2ACA284AA6D700BBC10F /* MobileRechargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileRechargeView.swift; sourceTree = "<group>"; };
+		57AE5D70284AB36D009E6E01 /* NautaRechargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NautaRechargeView.swift; sourceTree = "<group>"; };
+		57AE5D72284AB5D0009E6E01 /* JovenClubRechargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JovenClubRechargeView.swift; sourceTree = "<group>"; };
+		57AE5D77284AB6D9009E6E01 /* PropiaRechargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropiaRechargeView.swift; sourceTree = "<group>"; };
 		57E7C63F2849AF7A00F44BE7 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		57E7C6412849BC4E00F44BE7 /* USSD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USSD.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +131,7 @@
 		571EDEFF2849753E00D38B93 /* Transfermovil */ = {
 			isa = PBXGroup;
 			children = (
+				57AA2AC9284AA66000BBC10F /* Recharge */,
 				57AA2AB6284A7E6D00BBC10F /* Operations */,
 				57AA2AAF284A72CA00BBC10F /* Queries */,
 				57AA2AAC284A520800BBC10F /* Info.plist */,
@@ -130,6 +141,7 @@
 				571EDF042849754000D38B93 /* Assets.xcassets */,
 				571EDF062849754000D38B93 /* Preview Content */,
 				57E7C6412849BC4E00F44BE7 /* USSD.swift */,
+				57AA2AC7284A9DD600BBC10F /* SettingsView.swift */,
 			);
 			path = Transfermovil;
 			sourceTree = "<group>";
@@ -182,6 +194,17 @@
 				57AA2AC5284A9ABA00BBC10F /* PenaltyPaymentView.swift */,
 			);
 			path = Operations;
+			sourceTree = "<group>";
+		};
+		57AA2AC9284AA66000BBC10F /* Recharge */ = {
+			isa = PBXGroup;
+			children = (
+				57AA2ACA284AA6D700BBC10F /* MobileRechargeView.swift */,
+				57AE5D70284AB36D009E6E01 /* NautaRechargeView.swift */,
+				57AE5D72284AB5D0009E6E01 /* JovenClubRechargeView.swift */,
+				57AE5D77284AB6D9009E6E01 /* PropiaRechargeView.swift */,
+			);
+			path = Recharge;
 			sourceTree = "<group>";
 		};
 		57E7C63E2849AF5200F44BE7 /* SessionManager */ = {
@@ -330,8 +353,13 @@
 				57AA2AB3284A74E700BBC10F /* ElectricityQueryView.swift in Sources */,
 				571EDF032849753F00D38B93 /* ContentView.swift in Sources */,
 				57AA2AC6284A9ABA00BBC10F /* PenaltyPaymentView.swift in Sources */,
+				57AA2ACB284AA6D700BBC10F /* MobileRechargeView.swift in Sources */,
 				57AA2ABA284A8AA800BBC10F /* ElectricityPaymentView.swift in Sources */,
+				57AA2AC8284A9DD600BBC10F /* SettingsView.swift in Sources */,
+				57AE5D73284AB5D0009E6E01 /* JovenClubRechargeView.swift in Sources */,
+				57AE5D71284AB36D009E6E01 /* NautaRechargeView.swift in Sources */,
 				57AA2AB5284A74FC00BBC10F /* PhoneQueryView.swift in Sources */,
+				57AE5D78284AB6D9009E6E01 /* PropiaRechargeView.swift in Sources */,
 				571EDF012849753E00D38B93 /* TransfermovilApp.swift in Sources */,
 				57AA2AB8284A7E8B00BBC10F /* TransferView.swift in Sources */,
 				57E7C6402849AF7A00F44BE7 /* AuthView.swift in Sources */,
