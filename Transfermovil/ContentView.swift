@@ -8,57 +8,64 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var selectedBank: String = "BANDEC"
+    
     var body: some View {
         NavigationView{
-            Form{
+            List{
+                Picker(selection: /*@START_MENU_TOKEN@*/.constant(1)/*@END_MENU_TOKEN@*/, label: Text("Banco")) {
+                    Text("BANDEC").tag(1)
+                    Text("BPA").tag(2)
+                    Text("Banco Metropolitano").tag(3)
+                }
                 Section(header: Text("Sesión")){
-                    Text("Autenticarse")
-                    Text("Cerrar sesion")
+                    Label("Autenticarse", systemImage: "person")
+                    Label("Cerrar sesion", systemImage: "delete.left")
                 }
                 Section(header: Text("Operaciones")){
-                    Text("Transferencia")
-                    Text("Pagar Electricidad")
-                    Text("Pagar Teléfono")
-                    Text("Pagar la ONAT")
-                    Text("Pagar el Agua")
-                    Text("Pagar gas")
-                    Text("Giro postal")
-                    Text("Pagar multa")
+                    Label("Transferencia", systemImage: "creditcard")
+                    Label("Pagar Electricidad", systemImage: "lightbulb")
+                    Label("Pagar Teléfono", systemImage: "phone")
+                    Label("Pagar la ONAT", systemImage: "book.closed")
+                    Label("Pagar el Agua", systemImage: "drop")
+                    Label("Pagar gas", systemImage: "flame")
+                    Label("Giro postal", systemImage: "mail")
+                    Label("Pagar multa", systemImage: "list.bullet.rectangle")
                 }
                 
                 Section(header: Text("Recargar")){
-                    Text("Recargar móvil")
-                    Text("Recargar Nauta")
-                    Text("Recargar JovenClub")
-                    Text("Recargar propia")
-                    Text("Pagar cuota de Nauta Hogar")
-                    Text("Pagar deuda de Nauta Hogar")
+                    Label("Recargar móvil", systemImage: "iphone")
+                    Label("Recargar Nauta", systemImage: "network")
+                    Label("Pagar cuota de Nauta Hogar", systemImage: "network")
+                    Label("Pagar deuda de Nauta Hogar", systemImage: "network")
+                    Label("Recargar JovenClub", systemImage: "pc")
+                    Label("Recargar propia", systemImage: "phone.down")
                 }
                 
                 Section(header: Text("Consultas")){
-                    Text("Consultar saldo")
-                    Text("Consultar servicios")
-                    Text("Últimas operaciones")
-                    Text("Consultar límite de tarjeta")
-                    Text("Consultar todas las cuentas")
-                    Text("Consultar giro postal")
-                    Text("Consultar tipo de cambio")
-                    Text("Consultar ONAT")
+                    Label("Consultar saldo", systemImage: "dollarsign.circle")
+                    Label("Consultar servicios", systemImage: "list.bullet")
+                    Label("Últimas operaciones", systemImage: "list.number")
+                    Label("Consultar límite de tarjeta", systemImage: "creditcard.trianglebadge.exclamationmark")
+                    Label("Consultar todas las cuentas", systemImage: "list.bullet.below.rectangle")
+                    Label("Consultar giro postal", systemImage: "mail.and.text.magnifyingglass")
+                    Label("Consultar tipo de cambio", systemImage: "arrow.2.squarepath")
+                    Label("Consultar ONAT", systemImage: "book")
                 }
                 Section(header: Text("Configuración")){
-                    Text("Cambio de límite de tarjeta")
-                    Text("Registrarse")
-                    Text("Eliminar registro")
-                    Text("RServicios contratados")
-                    Text("Últimos pagos")
-                    Text("Amortizar crédito")
-                    Text("Información de tarjeta")
-                    Text("Cambiar clave")
-                    Text("Cambio de PIN multibanca")
+                    Label("Cambio de límite de tarjeta", systemImage: "creditcard.trianglebadge.exclamationmark")
+                    Label("Registrarse", systemImage: "person.badge.plus")
+                    Label("Eliminar registro", systemImage: "person.badge.minus")
+                    Label("Servicios contratados", systemImage: "list.number")
+                    Label("Últimos pagos", systemImage: "list.bullet.rectangle.portrait")
+                    Label("Amortizar crédito", systemImage: "banknote")
+                    Label("Información de tarjeta", systemImage: "creditcard")
+                    Label("Cambiar clave", systemImage: "creditcard.and.123")
+                    Label("Cambio de PIN multibanca", systemImage: "123.rectangle")
                 }
                 Section(header: Text("Información")){
-                    Text("Ayuda")
-                    Text("Acerca de")
+                    Label("Ayuda", systemImage: "questionmark.circle")
+                    Label("Acerca de", systemImage: "info.circle")
                 }
                 
             }
