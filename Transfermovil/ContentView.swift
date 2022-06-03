@@ -55,10 +55,26 @@ struct ContentView: View {
                         Label("Pagar Teléfono", systemImage: "phone")
                     }
                     Label("Pagar la ONAT", systemImage: "book.closed")
-                    Label("Pagar el Agua", systemImage: "drop")
-                    Label("Pagar gas", systemImage: "flame")
-                    Label("Giro postal", systemImage: "mail")
-                    Label("Pagar multa", systemImage: "list.bullet.rectangle")
+                    NavigationLink {
+                        WaterPaymentView()
+                    } label: {
+                        Label("Pagar el Agua", systemImage: "drop")
+                    }
+                    NavigationLink {
+                        GasPaymentView()
+                    } label: {
+                        Label("Pagar el Gas", systemImage: "flame")
+                    }
+                    NavigationLink {
+                        MoneyOrderView()
+                    } label: {
+                        Label("Giro postal", systemImage: "mail")
+                    }
+                    NavigationLink {
+                        PenaltyPaymentView()
+                    } label: {
+                        Label("Pagar multa", systemImage: "list.bullet.rectangle")
+                    }
                 }
                 
                 Section(header: Text("Recargar")){

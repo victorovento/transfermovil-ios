@@ -21,6 +21,10 @@
 		57AA2ABA284A8AA800BBC10F /* ElectricityPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA2AB9284A8AA800BBC10F /* ElectricityPaymentView.swift */; };
 		57AA2ABC284A8B8A00BBC10F /* PhonePaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA2ABB284A8B8A00BBC10F /* PhonePaymentView.swift */; };
 		57AA2ABE284A8C2800BBC10F /* ONATPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA2ABD284A8C2800BBC10F /* ONATPaymentView.swift */; };
+		57AA2AC0284A8F9600BBC10F /* WaterPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA2ABF284A8F9600BBC10F /* WaterPaymentView.swift */; };
+		57AA2AC2284A91F900BBC10F /* GasPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA2AC1284A91F900BBC10F /* GasPaymentView.swift */; };
+		57AA2AC4284A952B00BBC10F /* MoneyOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA2AC3284A952B00BBC10F /* MoneyOrderView.swift */; };
+		57AA2AC6284A9ABA00BBC10F /* PenaltyPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA2AC5284A9ABA00BBC10F /* PenaltyPaymentView.swift */; };
 		57E7C6402849AF7A00F44BE7 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E7C63F2849AF7A00F44BE7 /* AuthView.swift */; };
 		57E7C6422849BC4E00F44BE7 /* USSD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E7C6412849BC4E00F44BE7 /* USSD.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +65,10 @@
 		57AA2AB9284A8AA800BBC10F /* ElectricityPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityPaymentView.swift; sourceTree = "<group>"; };
 		57AA2ABB284A8B8A00BBC10F /* PhonePaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonePaymentView.swift; sourceTree = "<group>"; };
 		57AA2ABD284A8C2800BBC10F /* ONATPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ONATPaymentView.swift; sourceTree = "<group>"; };
+		57AA2ABF284A8F9600BBC10F /* WaterPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterPaymentView.swift; sourceTree = "<group>"; };
+		57AA2AC1284A91F900BBC10F /* GasPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasPaymentView.swift; sourceTree = "<group>"; };
+		57AA2AC3284A952B00BBC10F /* MoneyOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyOrderView.swift; sourceTree = "<group>"; };
+		57AA2AC5284A9ABA00BBC10F /* PenaltyPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenaltyPaymentView.swift; sourceTree = "<group>"; };
 		57E7C63F2849AF7A00F44BE7 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		57E7C6412849BC4E00F44BE7 /* USSD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USSD.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,6 +176,10 @@
 				57AA2AB9284A8AA800BBC10F /* ElectricityPaymentView.swift */,
 				57AA2ABB284A8B8A00BBC10F /* PhonePaymentView.swift */,
 				57AA2ABD284A8C2800BBC10F /* ONATPaymentView.swift */,
+				57AA2ABF284A8F9600BBC10F /* WaterPaymentView.swift */,
+				57AA2AC1284A91F900BBC10F /* GasPaymentView.swift */,
+				57AA2AC3284A952B00BBC10F /* MoneyOrderView.swift */,
+				57AA2AC5284A9ABA00BBC10F /* PenaltyPaymentView.swift */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -310,10 +322,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57AA2AC4284A952B00BBC10F /* MoneyOrderView.swift in Sources */,
 				57AA2ABC284A8B8A00BBC10F /* PhonePaymentView.swift in Sources */,
+				57AA2AC0284A8F9600BBC10F /* WaterPaymentView.swift in Sources */,
+				57AA2AC2284A91F900BBC10F /* GasPaymentView.swift in Sources */,
 				57E7C6422849BC4E00F44BE7 /* USSD.swift in Sources */,
 				57AA2AB3284A74E700BBC10F /* ElectricityQueryView.swift in Sources */,
 				571EDF032849753F00D38B93 /* ContentView.swift in Sources */,
+				57AA2AC6284A9ABA00BBC10F /* PenaltyPaymentView.swift in Sources */,
 				57AA2ABA284A8AA800BBC10F /* ElectricityPaymentView.swift in Sources */,
 				57AA2AB5284A74FC00BBC10F /* PhoneQueryView.swift in Sources */,
 				571EDF012849753E00D38B93 /* TransfermovilApp.swift in Sources */,
