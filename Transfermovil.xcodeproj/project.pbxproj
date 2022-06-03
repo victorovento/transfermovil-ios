@@ -14,6 +14,15 @@
 		571EDF122849754100D38B93 /* TransfermovilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571EDF112849754100D38B93 /* TransfermovilTests.swift */; };
 		571EDF1C2849754100D38B93 /* TransfermovilUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571EDF1B2849754100D38B93 /* TransfermovilUITests.swift */; };
 		571EDF1E2849754100D38B93 /* TransfermovilUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571EDF1D2849754100D38B93 /* TransfermovilUITestsLaunchTests.swift */; };
+		57AA2AB1284A731C00BBC10F /* ServicesQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA2AB0284A731C00BBC10F /* ServicesQuery.swift */; };
+		57AA2AB3284A74E700BBC10F /* ElectricityQueryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA2AB2284A74E700BBC10F /* ElectricityQueryView.swift */; };
+		57AA2AB5284A74FC00BBC10F /* PhoneQueryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA2AB4284A74FC00BBC10F /* PhoneQueryView.swift */; };
+		57AA2AB8284A7E8B00BBC10F /* TransferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA2AB7284A7E8B00BBC10F /* TransferView.swift */; };
+		57AA2ABA284A8AA800BBC10F /* ElectricityPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA2AB9284A8AA800BBC10F /* ElectricityPaymentView.swift */; };
+		57AA2ABC284A8B8A00BBC10F /* PhonePaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA2ABB284A8B8A00BBC10F /* PhonePaymentView.swift */; };
+		57AA2ABE284A8C2800BBC10F /* ONATPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA2ABD284A8C2800BBC10F /* ONATPaymentView.swift */; };
+		57E7C6402849AF7A00F44BE7 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E7C63F2849AF7A00F44BE7 /* AuthView.swift */; };
+		57E7C6422849BC4E00F44BE7 /* USSD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E7C6412849BC4E00F44BE7 /* USSD.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +53,16 @@
 		571EDF172849754100D38B93 /* TransfermovilUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransfermovilUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		571EDF1B2849754100D38B93 /* TransfermovilUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfermovilUITests.swift; sourceTree = "<group>"; };
 		571EDF1D2849754100D38B93 /* TransfermovilUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfermovilUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		57AA2AAC284A520800BBC10F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		57AA2AB0284A731C00BBC10F /* ServicesQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesQuery.swift; sourceTree = "<group>"; };
+		57AA2AB2284A74E700BBC10F /* ElectricityQueryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityQueryView.swift; sourceTree = "<group>"; };
+		57AA2AB4284A74FC00BBC10F /* PhoneQueryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneQueryView.swift; sourceTree = "<group>"; };
+		57AA2AB7284A7E8B00BBC10F /* TransferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferView.swift; sourceTree = "<group>"; };
+		57AA2AB9284A8AA800BBC10F /* ElectricityPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityPaymentView.swift; sourceTree = "<group>"; };
+		57AA2ABB284A8B8A00BBC10F /* PhonePaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonePaymentView.swift; sourceTree = "<group>"; };
+		57AA2ABD284A8C2800BBC10F /* ONATPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ONATPaymentView.swift; sourceTree = "<group>"; };
+		57E7C63F2849AF7A00F44BE7 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		57E7C6412849BC4E00F44BE7 /* USSD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USSD.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +113,15 @@
 		571EDEFF2849753E00D38B93 /* Transfermovil */ = {
 			isa = PBXGroup;
 			children = (
+				57AA2AB6284A7E6D00BBC10F /* Operations */,
+				57AA2AAF284A72CA00BBC10F /* Queries */,
+				57AA2AAC284A520800BBC10F /* Info.plist */,
+				57E7C63E2849AF5200F44BE7 /* SessionManager */,
 				571EDF002849753E00D38B93 /* TransfermovilApp.swift */,
 				571EDF022849753F00D38B93 /* ContentView.swift */,
 				571EDF042849754000D38B93 /* Assets.xcassets */,
 				571EDF062849754000D38B93 /* Preview Content */,
+				57E7C6412849BC4E00F44BE7 /* USSD.swift */,
 			);
 			path = Transfermovil;
 			sourceTree = "<group>";
@@ -125,6 +149,35 @@
 				571EDF1D2849754100D38B93 /* TransfermovilUITestsLaunchTests.swift */,
 			);
 			path = TransfermovilUITests;
+			sourceTree = "<group>";
+		};
+		57AA2AAF284A72CA00BBC10F /* Queries */ = {
+			isa = PBXGroup;
+			children = (
+				57AA2AB0284A731C00BBC10F /* ServicesQuery.swift */,
+				57AA2AB2284A74E700BBC10F /* ElectricityQueryView.swift */,
+				57AA2AB4284A74FC00BBC10F /* PhoneQueryView.swift */,
+			);
+			path = Queries;
+			sourceTree = "<group>";
+		};
+		57AA2AB6284A7E6D00BBC10F /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				57AA2AB7284A7E8B00BBC10F /* TransferView.swift */,
+				57AA2AB9284A8AA800BBC10F /* ElectricityPaymentView.swift */,
+				57AA2ABB284A8B8A00BBC10F /* PhonePaymentView.swift */,
+				57AA2ABD284A8C2800BBC10F /* ONATPaymentView.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		57E7C63E2849AF5200F44BE7 /* SessionManager */ = {
+			isa = PBXGroup;
+			children = (
+				57E7C63F2849AF7A00F44BE7 /* AuthView.swift */,
+			);
+			path = SessionManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +310,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57AA2ABC284A8B8A00BBC10F /* PhonePaymentView.swift in Sources */,
+				57E7C6422849BC4E00F44BE7 /* USSD.swift in Sources */,
+				57AA2AB3284A74E700BBC10F /* ElectricityQueryView.swift in Sources */,
 				571EDF032849753F00D38B93 /* ContentView.swift in Sources */,
+				57AA2ABA284A8AA800BBC10F /* ElectricityPaymentView.swift in Sources */,
+				57AA2AB5284A74FC00BBC10F /* PhoneQueryView.swift in Sources */,
 				571EDF012849753E00D38B93 /* TransfermovilApp.swift in Sources */,
+				57AA2AB8284A7E8B00BBC10F /* TransferView.swift in Sources */,
+				57E7C6402849AF7A00F44BE7 /* AuthView.swift in Sources */,
+				57AA2ABE284A8C2800BBC10F /* ONATPaymentView.swift in Sources */,
+				57AA2AB1284A731C00BBC10F /* ServicesQuery.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,15 +476,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Transfermovil/Preview Content\"";
 				DEVELOPMENT_TEAM = 3W589W9F3P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Transfermovil/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = splash;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -431,8 +497,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.victorovento.Transfermovil;
+				PRODUCT_BUNDLE_IDENTIFIER = com.victorovento.cubabankingapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -444,15 +511,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Transfermovil/Preview Content\"";
 				DEVELOPMENT_TEAM = 3W589W9F3P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Transfermovil/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = splash;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -461,8 +532,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.victorovento.Transfermovil;
+				PRODUCT_BUNDLE_IDENTIFIER = com.victorovento.cubabankingapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

@@ -8,24 +8,52 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var selectedBank: String = "BANDEC"
+    @State var selectedBank: Int = 1
+    @State var logoutAlert: Bool = true
+    
     
     var body: some View {
         NavigationView{
-            List{
-                Picker(selection: /*@START_MENU_TOKEN@*/.constant(1)/*@END_MENU_TOKEN@*/, label: Text("Banco")) {
+            
+            Form{
+                Picker("Banco", selection: $selectedBank) {
                     Text("BANDEC").tag(1)
                     Text("BPA").tag(2)
                     Text("Banco Metropolitano").tag(3)
                 }
+                                
                 Section(header: Text("Sesión")){
-                    Label("Autenticarse", systemImage: "person")
-                    Label("Cerrar sesion", systemImage: "delete.left")
+                    NavigationLink {
+                        AuthView(selectedBank:self.selectedBank)
+                    } label: {
+                        Label("Autenticarse", systemImage: "person")
+                    }
+                    Button {
+                        let logoutNumber = "*444*70#"
+                        callNumber(phoneNumber: logoutNumber)
+                        print("Sesión cerrada")
+                    } label: {
+                        Label("Cerrar sesion", systemImage: "xmark.circle")
+                    }.foregroundColor(.red)
+
+                    
                 }
                 Section(header: Text("Operaciones")){
-                    Label("Transferencia", systemImage: "creditcard")
-                    Label("Pagar Electricidad", systemImage: "lightbulb")
-                    Label("Pagar Teléfono", systemImage: "phone")
+                    NavigationLink {
+                        TransferView()
+                    } label: {
+                        Label("Transferencia", systemImage: "creditcard")
+                    }
+                    NavigationLink {
+                        ElectricityPaymentView()
+                    } label: {
+                        Label("Pagar Electricidad", systemImage: "lightbulb")
+                    }
+                    NavigationLink {
+                        PhonePaymentView()
+                    } label: {
+                        Label("Pagar Teléfono", systemImage: "phone")
+                    }
                     Label("Pagar la ONAT", systemImage: "book.closed")
                     Label("Pagar el Agua", systemImage: "drop")
                     Label("Pagar gas", systemImage: "flame")
@@ -43,15 +71,49 @@ struct ContentView: View {
                 }
                 
                 Section(header: Text("Consultas")){
-                    Label("Consultar saldo", systemImage: "dollarsign.circle")
-                    Label("Consultar servicios", systemImage: "list.bullet")
-                    Label("Últimas operaciones", systemImage: "list.number")
-                    Label("Consultar límite de tarjeta", systemImage: "creditcard.trianglebadge.exclamationmark")
-                    Label("Consultar todas las cuentas", systemImage: "list.bullet.below.rectangle")
-                    Label("Consultar giro postal", systemImage: "mail.and.text.magnifyingglass")
-                    Label("Consultar tipo de cambio", systemImage: "arrow.2.squarepath")
-                    Label("Consultar ONAT", systemImage: "book")
+                    NavigationLink {
+                        ServicesQuery()
+                    } label: {
+                        Label("Consultar servicios", systemImage: "list.bullet")
+                    }
+                    Button {
+                        callNumber(phoneNumber: "*444*46#")
+                    } label: {
+                        Label("Consultar saldo", systemImage: "dollarsign.circle")
+                    }
+                    Button {
+                        callNumber(phoneNumber: "*444*48#")
+                    } label: {
+                        Label("Últimas operaciones", systemImage: "list.number")
+                    }
+                    Button {
+                        callNumber(phoneNumber: "*444*62#")
+                    } label: {
+                        Label("Consultar límite de tarjeta", systemImage: "creditcard.trianglebadge.exclamationmark")
+                    }
+                    Button {
+                        callNumber(phoneNumber: "*444*58#")
+                    } label: {
+                        Label("Consultar todas las cuentas", systemImage: "list.bullet.below.rectangle")
+                    }
+                    Button {
+                        callNumber(phoneNumber: "*444*65#")
+                    } label: {
+                        Label("Consultar giro postal", systemImage: "mail.and.text.magnifyingglass")
+                    }
+                    Button {
+                        callNumber(phoneNumber: "*444*85#")
+                    } label: {
+                        Label("Consultar tipo de cambio", systemImage: "arrow.2.squarepath")
+                    }
+                    Button {
+                        // *444*56*RC05#
+                        callNumber(phoneNumber: "*444*85#")
+                    } label: {
+                        Label("Consultar ONAT", systemImage: "book")
+                    }
                 }
+                
                 Section(header: Text("Configuración")){
                     Label("Cambio de límite de tarjeta", systemImage: "creditcard.trianglebadge.exclamationmark")
                     Label("Registrarse", systemImage: "person.badge.plus")
@@ -68,10 +130,14 @@ struct ContentView: View {
                     Label("Acerca de", systemImage: "info.circle")
                 }
                 
-            }
+            }.symbolVariant(.fill)
             .navigationTitle("Transfermóvil")
+            
+            
         }
+        
     }
+
 }
 
 struct ContentView_Previews: PreviewProvider {
